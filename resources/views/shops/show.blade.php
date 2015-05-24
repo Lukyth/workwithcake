@@ -12,5 +12,4 @@
   <p>Created At : {{ $shop->created_at }}</p>
   <p>Updated At : {{ $shop->updated_at }}</p>
 
-  {!! link_to_route('shops.index', 'Back to Shops') !!}
 @endsection
