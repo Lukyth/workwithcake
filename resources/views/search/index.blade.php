@@ -60,16 +60,6 @@
         </div>
 
         <div class="form-group">
-          {!! Form::label('building', 'Building:') !!}
-          {!! Form::text('building', '', array('placeholder' => 'ex. Paragon')) !!}
-        </div>
-
-        <div class="form-group">
-          {!! Form::label('district', 'District:') !!}
-          {!! Form::text('district', '', array('placeholder' => 'ex. 13 (Hunger Game)')) !!}
-        </div>
-
-        <div class="form-group">
           {!! Form::label('area', 'Area:') !!}
           {!! Form::text('area', '', array('placeholder' => 'ex. 11 (Code Geass)')) !!}
         </div>

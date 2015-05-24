@@ -16,16 +16,16 @@
         There's no shops.
       @else
         @foreach( $shops as $shop )
-          <a href="{{ route('shops.show', $shop->slug) }}">
-            <div class="col-md-3">
-              <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png"
-              class="img-responsive">
-              <h2>{{ $shop->name }}</h2>
-              <p>Building : {{ $shop->building }}
-                <br>Price : {{ $shop->min_price }} - {{ $shop->max_price }}
-                <br>Time : {{ $shop->open_time }} - {{ $shop->close_time }}</p>
-            </div>
-          </a>
+          <div class="col-md-3">
+            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png"
+            class="img-responsive">
+            <a href="{{ route('shops.show', $shop->slug) }}">
+              <h2 class="cut-text">{{ $shop->name }}</h2>
+            </a>
+            <p class="cut-text">Building : {{ $shop->building }}</p>
+            <p>Price : {{ $shop->min_price }} - {{ $shop->max_price }}</p>
+            <p>Time : {{ $shop->open_time }} - {{ $shop->close_time }}</p>
+          </div>
         @endforeach
       @endif
     </div>
