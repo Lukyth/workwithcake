@@ -18,9 +18,17 @@ class CreateShopsTable extends Migration {
 			$table->string('name')->default('');
 			$table->string('slug')->default('');
 			$table->string('tel')->default('');
-			$table->float('rate')->default('0');
-			$table->text('description')->default('');
-			$table->text('place')->default('');
+			$table->time('open_time')->default('00:00:00');
+			$table->time('close_time')->default('23:59:59');
+			$table->string('open_day')->default('');
+			$table->integer('min_price')->default(0);
+			$table->integer('max_price')->default(1000000);
+			$table->text('building')->default('');
+			$table->text('district')->default('');
+			$table->text('area')->default('');
+			$table->boolean('wifi')->default(false);
+			$table->boolean('parking')->default(false);
+			$table->boolean('credit_card')->default(false);
 			$table->timestamps();
 		});
 	}
