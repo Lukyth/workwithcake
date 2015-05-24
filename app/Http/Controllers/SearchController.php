@@ -30,7 +30,7 @@ class SearchController extends Controller {
 	{
 
 		$input = Input::all();
-		$query = '';
+		$query = '1';
 
 		if ($input['name']) {
 			$query .= ' and `name` like "%' . $input['name'] . '%"';
@@ -48,7 +48,7 @@ class SearchController extends Controller {
 			$query .= ' and `place` like "%' . $input['place'] . '%"';
 		}
 
-		$shops = Shop::whereRaw('1' . $query)->orderBy('created_at')->get();
+		$shops = Shop::whereRaw($query)->orderBy('created_at')->get();
 
 		return view('search.show')->with('shops', $shops);
 	}
