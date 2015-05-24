@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="section">
-  <div class="container">
+  <div class="container shops">
     <div class="row">
       <div class="col-md-12">
         <div class="page-header">
@@ -16,7 +16,7 @@
         There's no shops.
       @else
         @foreach( $shops as $shop )
-          <div class="col-md-3">
+          <div class="col-md-3 col-sm-4 col-xs-6">
             <img src="{{ asset('/images/placeholder.png') }}"
             class="img-responsive">
             <a href="{{ route('shops.show', $shop->slug) }}">

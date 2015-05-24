@@ -3,3 +3,27 @@
   white-space: nowrap;
   overflow: hidden;
 }
+
+.cover-image {
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
+}
+
+.home .cover h1,
+.home p { color: #000 !important; }
+.home span,
+.home a { color: #fff !important; }
+.home a:hover { color: #000 !important; }
+
+.cover .navbar { background-color: rgba(0, 0, 0, .2) !important; }
+
+a:hover { text-decoration: none; }
+
+@media (max-width: 480px) {
+  .col-xs-6 {
+    width: 100%;
+  }
+
+  .search.index input,
+  .search.index label { width: 100% !important; }
+}

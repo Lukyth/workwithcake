@@ -7,18 +7,20 @@
   <title>Work with Cake</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
-  rel="stylesheet" type="text/css">
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
-        rel="stylesheet">
+  <script src="{{ asset('/js/jquery.min.js') }}"></script>
+  <script src="{{ asset('/js/bootstrap.min.js') }}"></script>
+
+  <link href="{{ asset('/css/bootstrap.css') }}" rel="stylesheet">
+  <link href="{{ asset('/css/font-awesome.min.css') }}" rel="stylesheet">
+
+  <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 
   <link href="{{ asset('/css/home.css') }}" rel="stylesheet">
+  <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
 
 </head>
 
-<body>
+<body class="home">
   <div class="cover">
     <div class="navbar navbar-fixed-top">
       <div class="container">
@@ -43,7 +45,7 @@
         </div>
       </div>
     </div>
-    <div class="background-image-fixed cover-image" style="background-image: url(https://unsplash.imgix.net/photo-1418065460487-3e41a6c84dc5?q=75&amp;fm=jpg&amp;s=127f3a3ccf4356b7f79594e05f6c840e);"></div>
+    <div class="background-image-fixed cover-image" style="background-image: url(../public/images/cover.jpg);"></div>
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2 text-center">
