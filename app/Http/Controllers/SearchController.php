@@ -52,6 +52,8 @@ class SearchController extends Controller {
 		}
 
 		$shops = Shop::whereRaw($query)->orderBy('created_at')->get();
+		// $shops = Shop::whereRaw($query)->paginate(12);
+		// $shops->setPath('search');
 
 		return view('search.show')->with('shops', $shops);
 	}

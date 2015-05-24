@@ -17,7 +17,7 @@
       @else
         @foreach( $shops as $shop )
           <div class="col-md-3">
-            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png"
+            <img src="{{ asset('/images/placeholder.png') }}"
             class="img-responsive">
             <a href="{{ route('shops.show', $shop->slug) }}">
               <h2 class="cut-text">{{ $shop->name }}</h2>
@@ -31,29 +31,7 @@
     </div>
     <div class="row">
       <div class="col-md-12 text-center">
-        <ul class="pagination">
-          <li>
-            <a href="#">Prev</a>
-          </li>
-          <li>
-            <a href="#">1</a>
-          </li>
-          <li>
-            <a href="#">2</a>
-          </li>
-          <li>
-            <a href="#">3</a>
-          </li>
-          <li>
-            <a href="#">4</a>
-          </li>
-          <li>
-            <a href="#">5</a>
-          </li>
-          <li>
-            <a href="#">Next</a>
-          </li>
-        </ul>
+        <?php echo $shops->render(); ?>
       </div>
     </div>
   </div>

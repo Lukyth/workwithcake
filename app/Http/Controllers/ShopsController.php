@@ -20,10 +20,8 @@ class ShopsController extends Controller {
 	 */
 	public function index()
 	{
-		$shops = Shop::selectRaw("*")
-							->join('menus', 'shops.id', '=', 'menus.shop_id')
-							->groupBy('shops.id')
-        			->get();
+		$shops = Shop::whereRaw('1')->paginate(12);
+		$shops->setPath('shops');
 		return view('shops.index', compact('shops'));
 	}
 
