@@ -1,3 +1,17 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.register ~ footer.section,
+.login ~ footer.section,
+.reset ~ footer.section,
+.password ~ footer.section {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 .cut-text {
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -17,7 +31,9 @@
 
 .cover .navbar { background-color: rgba(0, 0, 0, .2) !important; }
 
-a:hover { text-decoration: none; }
+a:hover,
+a:focus,
+a:active { text-decoration: none !important; }
 
 @media (max-width: 480px) {
   .col-xs-6 {

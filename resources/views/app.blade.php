@@ -44,7 +44,7 @@
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="{{ url('/search') }}">Search</a></li>
 					<li><a href="{{ url('/shops') }}">Shops</a></li>
-					{{-- @if (Auth::guest())
+					@if (Auth::guest())
 						<li><a href="{{ url('/auth/login') }}">Login</a></li>
 						<li><a href="{{ url('/auth/register') }}">Register</a></li>
 					@else
@@ -54,7 +54,7 @@
 								<li><a href="{{ url('/auth/logout') }}">Logout</a></li>
 							</ul>
 						</li>
-					@endif --}}
+					@endif
 				</ul>
 			</div>
 		</div>
