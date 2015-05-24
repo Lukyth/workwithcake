@@ -1,11 +1,15 @@
 <?php namespace App\Http\Controllers;
 
 use App\Shop;
+use App\Food;
+use App\Location;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+
+use DB;
 
 class ShopsController extends Controller {
 
@@ -16,7 +20,10 @@ class ShopsController extends Controller {
 	 */
 	public function index()
 	{
-		$shops = Shop::all();
+		$shops = Shop::selectRaw("*")
+							->join('menus', 'shops.id', '=', 'menus.shop_id')
+							->groupBy('shops.id')
+        			->get();
 		return view('shops.index', compact('shops'));
 	}
 
@@ -48,7 +55,13 @@ class ShopsController extends Controller {
 	 */
 	public function show(Shop $shop)
 	{
-		return view('shops.show', compact('shop'));
+		$foods = Food::selectRaw("*")
+							->whereRaw('exists ( select * from `menus` where foods.id = menus.food_id and exists ( select * from `shops` where `id` = ' . $shop['id'] . ' and shops.id = menus.shop_id ) )')
+        			->get();
+    $locations = Location::selectRaw("*")
+							->whereRaw('exists ( select * from `nearbies` where locations.id = nearbies.location_id and exists ( select * from `shops` where `id` = ' . $shop['id'] . ' and shops.id = nearbies.shop_id ) )')
+        			->get();
+		return view('shops.show', compact('shop', 'locations', 'foods'));
 	}
 
 	/**

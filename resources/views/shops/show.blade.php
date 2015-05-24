@@ -32,16 +32,44 @@
           <div class="col-md-8">{{ $shop->building }}, {{ $shop->district }}, {{ $shop->area }}</div>
         </p>
         <p class="row">
+          <div class="col-md-4">Nearby Place :</div>
+          <div class="col-md-8">
+            @foreach( $locations as $location )
+              {{ $location->area }},
+            @endforeach
+          </div>
+        </p>
+        <p class="row">
+          <div class="col-md-4">Foods :</div>
+          <div class="col-md-8">
+            @foreach( $foods as $food )
+              {{ $food->dessert }},
+            @endforeach
+          </div>
+        </p>
+        <p class="row">
           <div class="col-md-4">Wifi :</div>
-          <div class="col-md-8">{{ $shop->wifi }}</div>
+          <div class="col-md-8">
+            @if ( !$shop->wifi )Y
+            @else N
+            @endif
+          </div>
         </p>
         <p class="row">
           <div class="col-md-4">Parking :</div>
-          <div class="col-md-8">{{ $shop->parking }}</div>
+          <div class="col-md-8">
+            @if ( !$shop->parking )Y
+            @else N
+            @endif
+          </div>
         </p>
         <p class="row">
           <div class="col-md-4">Credit Card :</div>
-          <div class="col-md-8">{{ $shop->credit_card }}</div>
+          <div class="col-md-8">
+            @if ( !$shop->credit_card )Y
+            @else N
+            @endif
+          </div>
         </p>
       </div>
     </div>
