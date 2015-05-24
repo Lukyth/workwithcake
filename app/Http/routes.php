@@ -13,15 +13,18 @@
 
 Route::get('/', 'WelcomeController@index');
 
-// Route::get('home', 'HomeController@index');
+Route::get('home', 'HomeController@index');
 
-// Route::controllers([
-// 	'auth' => 'Auth\AuthController',
-// 	'password' => 'Auth\PasswordController',
-// ]);
+Route::controllers([
+	'auth' => 'Auth\AuthController',
+	'password' => 'Auth\PasswordController',
+]);
 
 Route::resource('shops', 'ShopsController');
+Route::resource('search', 'SearchController');
+
 Route::model('shops', 'Shop');
+
 Route::bind('shops', function($value, $route) {
   return App\Shop::whereSlug($value)->first();
 });
