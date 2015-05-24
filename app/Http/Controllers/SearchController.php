@@ -31,14 +31,13 @@ class SearchController extends Controller {
 
 		$input = Input::all();
 		$query = '1';
-
 		foreach ($input as $key => $value) {
 			if ($value != '' && $key != '_token') {
 				if ($key == 'nearby') {
-
+					$query .= ' and exists ( select * from `nearbies` where shops.id = nearbies.shop_id and exists ( select * from `locations` where `area` like "%' . $value . '%" and locations.id = nearbies.location_id ) )';
 				}
 				else if ($key == 'food') {
-
+					$query .= ' and exists ( select * from `menus` where shops.id = menus.shop_id and exists ( select * from `foods` where `dessert` like "%' . $value . '%" and foods.id = menus.food_id ) )';
 				}
 				else if ($key == 'open_time' || $key == 'min_price') {
 					$query .= ' and `' . $key . '` >= ' . '"' . $value . '"';

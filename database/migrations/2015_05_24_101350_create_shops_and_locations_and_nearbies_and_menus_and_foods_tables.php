@@ -23,7 +23,7 @@ class CreateShopsAndLocationsAndNearbiesAndMenusAndFoodsTables extends Migration
 			$table->string('open_day')->default('');
 			$table->integer('min_price')->default(0);
 			$table->integer('max_price')->default(1000000);
-			$table->text('building')->default('');
+			$table->string('building')->default('');
 			$table->string('district')->default('');
 			$table->string('area')->default('');
 			$table->boolean('wifi')->default(false);
@@ -76,9 +76,9 @@ class CreateShopsAndLocationsAndNearbiesAndMenusAndFoodsTables extends Migration
 	{
 		Schema::drop('shops');
 		Schema::drop('locations');
+		Schema::drop('foods');
 		Schema::drop('menus');
 		Schema::drop('nearbies');
-		Schema::drop('foods');
 	}
 
 }
