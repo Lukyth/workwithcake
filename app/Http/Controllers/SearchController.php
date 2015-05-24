@@ -32,20 +32,24 @@ class SearchController extends Controller {
 		$input = Input::all();
 		$query = '1';
 
-		if ($input['name']) {
-			$query .= ' and `name` like "%' . $input['name'] . '%"';
-		}
+		foreach ($input as $key => $value) {
+			if ($value != '' && $key != '_token') {
+				if ($key == 'nearby') {
 
-		if ($input['tel']) {
-			$query .= ' and `tel` like "%' . $input['tel'] . '%"';
-		}
+				}
+				else if ($key == 'food') {
 
-		if ($input['description']) {
-			$query .= ' and `description` like "%' . $input['description'] . '%"';
-		}
-
-		if ($input['place']) {
-			$query .= ' and `place` like "%' . $input['place'] . '%"';
+				}
+				else if ($key == 'open_time' || $key == 'min_price') {
+					$query .= ' and `' . $key . '` >= ' . '"' . $value . '"';
+				}
+				else if ($key == 'close_time' || $key == 'max_price') {
+					$query .= ' and `' . $key . '` <= ' . '"' . $value . '"';
+				}
+				else {
+					$query .= ' and `' . $key . '` like "%' . $value . '%"';
+				}
+			}
 		}
 
 		$shops = Shop::whereRaw($query)->orderBy('created_at')->get();

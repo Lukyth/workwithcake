@@ -53,12 +53,7 @@
 
             <div class="form-group">
               <div class="input-group">
-                <input type="text" name="place" class="form-control" placeholder="ex. bangkok">
-                <input type="hidden" name="name">
-                <input type="hidden" name="tel">
-                <input type="hidden" name="min-rate">
-                <input type="hidden" name="max-rate">
-                <input type="hidden" name="description">
+                <input type="text" name="building" class="form-control" placeholder="ex. Paragon">
                 <span class="input-group-btn">
                   <button class="btn btn-success" type="submit">Search<br></a>
                 </span>

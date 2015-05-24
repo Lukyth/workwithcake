@@ -21,9 +21,9 @@
               <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png"
               class="img-responsive">
               <h2>{{ $shop->name }}</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisici elit,
-                <br>sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
-                <br>Ut enim ad minim veniam, quis nostrud</p>
+              <p>Building : {{ $shop->building }}
+                <br>Price : {{ $shop->min_price }} - {{ $shop->max_price }}
+                <br>Time : {{ $shop->open_time }} - {{ $shop->close_time }}</p>
             </div>
           </a>
         @endforeach
