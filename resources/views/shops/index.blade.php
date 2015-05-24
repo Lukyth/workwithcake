@@ -13,19 +13,21 @@
     </div>
     <div class="row">
       @if ( !$shops->count() )
-        There's no shops.
+        There's no matching result.
       @else
         @foreach( $shops as $shop )
-          <div class="col-md-3 col-sm-4 col-xs-6">
-            <img src="{{ asset('/images/placeholder.png') }}"
-            class="img-responsive">
-            <a href="{{ route('shops.show', $shop->slug) }}">
-              <h2 class="cut-text">{{ $shop->name }}</h2>
-            </a>
-            <p class="cut-text">Building : {{ $shop->building }}</p>
-            <p>Price : {{ $shop->min_price }} - {{ $shop->max_price }}</p>
-            <p>Time : {{ $shop->open_time }} - {{ $shop->close_time }}</p>
-          </div>
+          <a href="{{ route('shops.show', $shop->slug) }}">
+            <div class="col-md-3 col-sm-4 col-xs-6">
+              <div class="shadow-z-1 card-shop">
+                <img src="{{ asset('/images/placeholder.png') }}"
+                class="img-responsive">
+                <h2 class="cut-text">{{ $shop->name }}</h2>
+                <p class="cut-text">Building : {{ $shop->building }}</p>
+                <p>Price : {{ $shop->min_price }} - {{ $shop->max_price }}</p>
+                <p>Time : {{ $shop->open_time }} - {{ $shop->close_time }}</p>
+              </div>
+            </div>
+          </a>
         @endforeach
       @endif
     </div>

@@ -12,13 +12,17 @@
 	<link href="{{ asset('/css/bootstrap.css') }}" rel="stylesheet">
   <link href="{{ asset('/css/font-awesome.min.css') }}" rel="stylesheet">
 
-	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+	{{-- <link href="{{ asset('/css/app.css') }}" rel="stylesheet"> --}}
 	<link href="{{ asset('/css/style.css') }}" rel="stylesheet">
 
 	@yield('css')
 
 	<!-- Fonts -->
 	<link href="{{ asset('/css/fonts.css') }}" rel="stylesheet">
+	<link href="{{ asset('/css/material-fullpalette.min.css') }}" rel="stylesheet">
+	<link href="{{ asset('/css/material.min.css') }}" rel="stylesheet">
+	<link href="{{ asset('/css/ripples.min.css') }}" rel="stylesheet">
+	<link href="{{ asset('/css/roboto.min.css') }}" rel="stylesheet">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -100,5 +104,8 @@
 	<!-- Scripts -->
 	<script src="{{ asset('/js/jquery.min.js') }}"></script>
 	<script src="{{ asset('/js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('/js/material.min.js') }}"></script>
+	<script src="{{ asset('/js/ripples.min.js') }}"></script>
+	<script src="{{ asset('/js/script.js') }}"></script>
 </body>
 </html>

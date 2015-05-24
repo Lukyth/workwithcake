@@ -38,7 +38,7 @@
             <li class="">
               <a href="{{ url('/search') }}">Search<br></a>
             </li>
-            <li class="active">
+            <li class="">
               <a href="{{ url('/shops') }}">Shops<br></a>
             </li>
             @if (Auth::guest())

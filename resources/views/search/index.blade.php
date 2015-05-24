@@ -83,29 +83,32 @@
         <div class="form-group col-md-6">
           {!! Form::label('food', 'Food:', array('class' => 'col-md-4 col-xs-4')) !!}
           {!! Form::text('food', '', array('class' => 'col-md-8 col-xs-8 form-control', 'placeholder' => 'ex. Cake')) !!}
-          <div class="clearfix"></div>
+          {{-- <div class="clearfix"></div> --}}
         </div>
+        <div class="clearfix"></div>
         <div class="row">
           <div class="container text-center">
-            <div class="form-group col-md-2 col-xs-3">
+            <div class="form-group col-md-2 col-xs-3 checkbox">
               {!! Form::label('wifi', 'Wifi:') !!}
               {!! Form::checkbox('wifi'); !!}
+              <span class="checkbox-material"><span class="check"></span></span>
             </div>
 
-            <div class="form-group col-md-2 col-xs-3">
+            <div class="form-group col-md-2 col-xs-3 checkbox">
               {!! Form::label('parking', 'Parking:') !!}
               {!! Form::checkbox('parking'); !!}
+              <span class="checkbox-material"><span class="check"></span></span>
             </div>
 
-            <div class="form-group col-md-2 col-xs-3">
+            <div class="form-group col-md-2 col-xs-3 checkbox">
               {!! Form::label('creadit_card', 'Creadit Card:') !!}
               {!! Form::checkbox('creadit_card'); !!}
+              <span class="checkbox-material"><span class="check"></span></span>
             </div>
-            <div class="clearfix"></div>
           </div>
         </div>
 
-        <div class="clearfix"></div>
+        {{-- <div class="clearfix"></div> --}}
         <div class="row">
           <div class="container text-center">
             <div class="form-group">
