@@ -12,6 +12,7 @@
       </div>
     </div>
     <div class="row">
+      <div class="well bs-component">
       {!! Form::open(array('route' => 'search.store')) !!}
 
         <div class="form-group col-md-6">
@@ -88,23 +89,25 @@
         <div class="clearfix"></div>
         <div class="row">
           <div class="container text-center">
+
             <div class="form-group col-md-2 col-xs-3 checkbox">
-              {!! Form::label('wifi', 'Wifi:') !!}
-              {!! Form::checkbox('wifi'); !!}
-              <span class="checkbox-material"><span class="check"></span></span>
+              <label>
+                <input type="checkbox" name="wifi"><span class="checkbox-material"><span class="check"></span></span> Wifi
+              </label>
             </div>
 
             <div class="form-group col-md-2 col-xs-3 checkbox">
-              {!! Form::label('parking', 'Parking:') !!}
-              {!! Form::checkbox('parking'); !!}
-              <span class="checkbox-material"><span class="check"></span></span>
+              <label>
+                <input type="checkbox" name="parking"><span class="checkbox-material"><span class="check"></span></span> Parking
+              </label>
             </div>
 
             <div class="form-group col-md-2 col-xs-3 checkbox">
-              {!! Form::label('creadit_card', 'Creadit Card:') !!}
-              {!! Form::checkbox('creadit_card'); !!}
-              <span class="checkbox-material"><span class="check"></span></span>
+              <label>
+                <input type="checkbox" name="credit_card"><span class="checkbox-material"><span class="check"></span></span> Credit Card
+              </label>
             </div>
+
           </div>
         </div>
 
@@ -118,6 +121,7 @@
         </div>
 
       {!! Form::close() !!}
+      </div>
     </div>
   </div>
 </div>

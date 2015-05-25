@@ -19,10 +19,15 @@
 
 	<!-- Fonts -->
 	<link href="{{ asset('/css/fonts.css') }}" rel="stylesheet">
+
 	<link href="{{ asset('/css/material-fullpalette.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('/css/material.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('/css/ripples.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('/css/roboto.min.css') }}" rel="stylesheet">
+
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ asset('/images/favicon-32x32.png') }}">
+	<link rel="icon" type="image/png" sizes="96x96" href="{{ asset('/images/favicon-96x96.png') }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/images/favicon-16x16.png') }}">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,7 +46,8 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="{{ url('/') }}">Work with Cake</a>
+				<a class="navbar-brand" href="{{ url('/') }}">
+					<img src="{{ asset('/images/logo.png') }}" alt="Work with Cake">Work with Cake</a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -84,16 +90,16 @@
 	          <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
 	            <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
 	            <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
-	            <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
-	            <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+	            <a href="https://www.facebook.com/workwithcake"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+	            <a href="https://github.com/Lukyth"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
 	          </div>
 	        </div>
 	        <div class="row">
 	          <div class="col-md-12 hidden-xs text-right">
 	            <a href="#"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
 	            <a href="#"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
-	            <a href="#"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
-	            <a href="#"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+	            <a href="https://www.facebook.com/workwithcake"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+	            <a href="https://github.com/Lukyth"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
 	          </div>
 	        </div>
 	      </div>

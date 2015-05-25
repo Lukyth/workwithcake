@@ -63,6 +63,30 @@ a:nth-child(4n+1) .card-shop {
   color: #263238;
 }
 
+.search.index .checkbox-material:nth-child(3) {
+  display: none;
+}
+
+.navbar-brand {
+  padding-top: 2px !important;
+}
+
+.navbar-brand img {
+  height: 56px;
+  display: inline;
+  margin-right: 10px;
+}
+
+.home .navbar-brand {
+  padding-top: 15px !important;
+}
+
+@media (max-width: 1199px) {
+  .navbar-brand img {
+    height: 46px;
+  }
+}
+
 @media (max-width: 480px) {
   .col-xs-6 {
     width: 100%;
