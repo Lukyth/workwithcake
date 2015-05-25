@@ -29,6 +29,10 @@ html {
 .home a { color: #fff !important; }
 .home a:hover { color: #000 !important; }
 
+.home .nav .open a,
+.home .nav .dropdown:hover span,
+.home .nav .open span { color: #000 !important; }
+
 .cover .navbar { background-color: rgba(0, 0, 0, .2) !important; }
 
 a:hover,

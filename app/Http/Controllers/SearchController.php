@@ -45,6 +45,9 @@ class SearchController extends Controller {
 				else if ($key == 'close_time' || $key == 'max_price') {
 					$query .= ' and `' . $key . '` <= ' . '"' . $value . '"';
 				}
+				else if ($key == 'wifi' || $key == 'parking' || $key == 'credit_card') {
+					$query .= ' and `' . $key . '` = ' . '"' . $value . '"';
+				}
 				else {
 					$query .= ' and `' . $key . '` like "%' . $value . '%"';
 				}
